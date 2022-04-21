@@ -1,0 +1,29 @@
+<div class="user-info">
+  <h1 class="title">{{title}}</h1>
+<button class="btn-add">Add User</button>
+<table class="user-table">
+  <tr>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>UserName</th>
+    <th>Age</th>
+    <th>Salary</th>
+  </tr>
+  <tr *ngFor="let userlist of userlists">
+    <td>{{userlist.id}}</td>
+    <td>{{userlist.firstName}}</td>
+    <td>{{userlist.lastName}}</td>
+    <td>{{userlist.userName}}</td>
+    <td>{{userlist.age}}</td>
+    <td>{{userlist.salary}}</td>
+    <td>
+      <button class="btn-del">Delete</button>
+    </td>
+    <td>
+      <button class="btn-edit">Edit</button>
+    </td>
+  </tr>
+</table>
+
+</div>
