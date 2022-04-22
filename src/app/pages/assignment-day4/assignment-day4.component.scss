@@ -1,0 +1,31 @@
+.angular-event{
+  width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+  border: 2px solid #630363;
+  font-family: sans-serif;
+  .ttl{
+
+  }
+  p{
+    span{
+      font-size: 50px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+  .btn-inc,
+  .btn-dec{
+    color: #fff;
+    padding: 10px 12px 10px 12px;
+    //border: 0;
+    border-radius: 5px;
+  }
+  .btn-inc{
+    background-color: #61ca5c;
+    margin-right: 10px;
+  }
+  .btn-dec{
+    background-color: #d42a29;
+  }
+}
