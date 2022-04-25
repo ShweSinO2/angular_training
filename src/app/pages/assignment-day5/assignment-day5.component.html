@@ -1,0 +1,14 @@
+<table class="user-table">
+  <tr>
+    <th [attr.colspan]="colspanVal">Name</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor = "let userDetail of userDetails">
+    <td [attr.colspan]="colspanVal">{{userDetail.name}}</td>
+    <td>{{userDetail.age}}</td>
+  </tr>
+</table>
+<hr>
+<p [class.errMsg]="isTrue">Test Error</p>
+<hr>
+<p>User name is <span [style]="userStyle">Jack</span></p>
