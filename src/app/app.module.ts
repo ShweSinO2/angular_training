@@ -8,6 +8,7 @@ import { TestingOneComponent } from './pages/testing-one/testing-one.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
+import { AssignmentDay7Component } from './pages/assignment-day7/assignment-day7.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6
     TestingOneComponent,
     AssignmentDay4Component,
     AssignmentDay5Component,
-    AssignmentDay6Component
+    AssignmentDay6Component,
+    AssignmentDay7Component
   ],
   imports: [
     BrowserModule,

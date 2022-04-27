@@ -1,0 +1,42 @@
+<h3>NgIf with age less than 30</h3>
+<ul *ngFor = "let person of people">
+  <li *ngIf = "person.age < 30">
+    {{person.name}} ({{person.age}})
+  </li>
+</ul>
+
+<hr>
+
+<h3>NgIf with color</h3>
+<ul *ngFor = "let person of people">
+  <li *ngIf = "person.country === 'UK'" [style.color]="'green'">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li *ngIf = "person.country === 'USA'" [style.color]="'blue'">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li *ngIf = "person.country === 'HK'" [style.color]="'red'">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li *ngIf = "person.country !== 'UK' && person.country !== 'USA' && person.country !== 'HK'" [style.color]="'yellow'">
+    {{person.name}} ({{person.country}})
+  </li>
+</ul>
+
+<hr>
+
+<h3>NgSwitch with color</h3>
+<ul *ngFor = "let person of people" [ngSwitch]="person.country">
+  <li  *ngSwitchCase = "'UK'" [style.color]="'green'">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li  *ngSwitchCase = "'USA'" [style.color]="'blue'">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li  *ngSwitchCase = "'HK'" [style.color]="'red'">
+    {{person.name}} ({{person.country}})
+  </li>
+  <li  *ngSwitchDefault [style.color]="'yellow'">
+    {{person.name}} ({{person.country}})
+  </li>
+</ul>
