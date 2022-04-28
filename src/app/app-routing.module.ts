@@ -5,6 +5,8 @@ import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
 import { AssignmentDay7Component } from './pages/assignment-day7/assignment-day7.component';
 import { TestingOneComponent } from './pages/testing-one/testing-one.component';
+import { UserListComponent } from './pages/user-list/user-list.component';
+import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: 'day7',
     component: AssignmentDay7Component
+  },
+  {
+    path: 'registration',
+    component: UserRegistrationComponent
+  },
+  {
+    path: 'user-list',
+    component: UserListComponent
   }
 ];
 
