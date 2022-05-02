@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AssignmentDay10TableComponent } from './pages/assignment-day10-table/assignment-day10-table.component';
+import { AssignmentDay10Component } from './pages/assignment-day10/assignment-day10.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
@@ -36,6 +38,14 @@ const routes: Routes = [
   {
     path: 'user-list',
     component: UserListComponent
+  },
+  {
+    path: 'day10',
+    component: AssignmentDay10Component
+  },
+  {
+    path: 'day10-table',
+    component: AssignmentDay10TableComponent
   }
 ];
 

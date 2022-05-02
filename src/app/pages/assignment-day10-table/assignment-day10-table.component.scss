@@ -1,0 +1,40 @@
+.user-table {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: sans-serif;
+
+  table {
+    width: 100%;
+    border: 1px solid #daeaf6;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-collapse: collapse;
+    border-bottom: 2px solid #3f51b5;
+
+    thead {
+      tr {
+        background-color: #3f51b5;
+
+        th {
+          padding: 15px 20px;
+          color: #f5f5f5;
+          text-align: left;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 12px 18px;
+        }
+      }
+
+      tr:nth-child(2n) {
+        background-color: #f3f3f3;
+        color: #3f51b5;
+      }
+    }
+
+  }
+
+}

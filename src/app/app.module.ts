@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,11 @@ import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6
 import { AssignmentDay7Component } from './pages/assignment-day7/assignment-day7.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
+import { AssignmentDay10Component } from './pages/assignment-day10/assignment-day10.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgMaterialModule } from './ng-material/ng-material.module';
+import { AssignmentDay10TableComponent } from './pages/assignment-day10-table/assignment-day10-table.component';
+
 
 @NgModule({
   declarations: [
@@ -21,12 +26,17 @@ import { UserListComponent } from './pages/user-list/user-list.component';
     AssignmentDay6Component,
     AssignmentDay7Component,
     UserRegistrationComponent,
-    UserListComponent
+    UserListComponent,
+    AssignmentDay10Component,
+    AssignmentDay10TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    NgMaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
