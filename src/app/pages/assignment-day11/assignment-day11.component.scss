@@ -1,0 +1,53 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+
+  h1 {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .form-group {
+    display: block;
+  }
+
+  .submit-btn {
+    margin-top: 20px;
+  }
+}
+
+.user-table {
+  h1 {
+    text-align: center;
+  }
+
+  .noregister {
+    text-align: center;
+  }
+
+  table {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        th {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding-left: 10px;
+        }
+
+        td:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
