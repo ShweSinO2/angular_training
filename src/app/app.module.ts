@@ -17,8 +17,7 @@ import { UserListComponent } from './pages/user-list/user-list.component';
 import { AssignmentDay10Component } from './pages/assignment-day10/assignment-day10.component';
 import { AssignmentDay10TableComponent } from './pages/assignment-day10-table/assignment-day10-table.component';
 import { AssignmentDay11Component } from './pages/assignment-day11/assignment-day11.component';
-
-
+import { AssignmentDay12Component } from './pages/assignment-day12/assignment-day12.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +32,7 @@ import { AssignmentDay11Component } from './pages/assignment-day11/assignment-da
     AssignmentDay10Component,
     AssignmentDay10TableComponent,
     AssignmentDay11Component,
+    AssignmentDay12Component
   ],
   imports: [
     BrowserModule,
