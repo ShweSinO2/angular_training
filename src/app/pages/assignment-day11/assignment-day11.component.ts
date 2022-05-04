@@ -30,7 +30,7 @@ export class AssignmentDay11Component implements OnInit {
     };
   }
 
-  removeData(id: any) {
+  removeData(id: number) {
     this.userData.splice(id,1);
   }
 

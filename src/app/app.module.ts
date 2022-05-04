@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMaterialModule } from './ng-material/ng-material.module';
-import { AngularMaterialModule } from './angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
 
+//pages
 import { AppComponent } from './app.component';
 import { TestingOneComponent } from './pages/testing-one/testing-one.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
@@ -40,8 +40,7 @@ import { AssignmentDay11Component } from './pages/assignment-day11/assignment-da
     FormsModule,
     BrowserAnimationsModule,
     NgMaterialModule,
-    ReactiveFormsModule,
-    AngularMaterialModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
