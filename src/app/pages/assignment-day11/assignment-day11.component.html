@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>Membership Form</h1>
+  <form #myForm="ngForm" (ngSubmit)="saveData()">
+    <mat-form-field appearance="standard" class="form-group">
+      <mat-label>Name*</mat-label>
+      <input matInput [(ngModel)]="formData.name" name="name" placeholder="Name">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard" class="form-group">
+      <mat-label>Email*</mat-label>
+      <input matInput type="email" [(ngModel)]="formData.email" name="email" placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-group">
+      <mat-label>Membership Date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="formData.mbdate" name="mbdate">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <div class="submit-btn">
+      <button mat-flat-button color="primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<div class="user-table">
+  <h1>Member List</h1>
+  <div *ngIf="userData.length == 0 else table" class="noregister">
+    <p>There is no registered member to display</p>
+  </div>
+  <ng-template #table>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>#ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of userData; let id = index;">
+          <td>{{id + 1}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.mbdate | date: 'dd/MM/yyyy'}}</td>
+          <td (click)="removeData(id)"><button mat-flat-button color="warn">Delete</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

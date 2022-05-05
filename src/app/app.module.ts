@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgMaterialModule } from './ng-material/ng-material.module';
 import { AppRoutingModule } from './app-routing.module';
+
+//pages
 import { AppComponent } from './app.component';
 import { TestingOneComponent } from './pages/testing-one/testing-one.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
@@ -12,10 +15,8 @@ import { AssignmentDay7Component } from './pages/assignment-day7/assignment-day7
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { AssignmentDay10Component } from './pages/assignment-day10/assignment-day10.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgMaterialModule } from './ng-material/ng-material.module';
 import { AssignmentDay10TableComponent } from './pages/assignment-day10-table/assignment-day10-table.component';
-
+import { AssignmentDay11Component } from './pages/assignment-day11/assignment-day11.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AssignmentDay10TableComponent } from './pages/assignment-day10-table/as
     UserRegistrationComponent,
     UserListComponent,
     AssignmentDay10Component,
-    AssignmentDay10TableComponent
+    AssignmentDay10TableComponent,
+    AssignmentDay11Component,
   ],
   imports: [
     BrowserModule,
