@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-assignment-day12',
@@ -16,18 +16,40 @@ export class AssignmentDay12Component implements OnInit {
     this.form = this.fb.group({
       fname: ['', [Validators.required]],
       lname: ['', [Validators.required]],
-      email: ['', [Validators.required,Validators.email]],
-      password: ['', [Validators.required,Validators.minLength(6)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
       cfmPassword: ['', [Validators.required]],
     },
-    );
+    {
+      validators: this.MustMatch('password', 'cfmPassword')
+    });
   }
 
-  public myError = (controlName: string, errorName: string) =>{
+  public myError = (controlName: string, errorName: string) => {
     return this.form.controls[controlName].hasError(errorName);
   }
 
-  saveData(data: any){
-    alert(JSON.stringify(data));
+  // custom validator to check that two fields match
+  MustMatch(controlName: string, matchingControlName: string) {
+    return (fg: FormGroup) => {
+      const control = fg.controls[controlName];
+      const matchingControl = fg.controls[matchingControlName];
+
+      if (matchingControl.errors && !matchingControl.errors['MustMatch']) {
+        // return if another validator has already found an error on the matchingControl
+        return;
+      }
+
+      // set error on matchingControl if validation fails
+      if (control.value !== matchingControl.value) {
+        matchingControl.setErrors({ MustMatch: true });
+      } else {
+        matchingControl.setErrors(null);
+      }
+    }
+  }
+
+  saveData(data: any) {
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(data));
   }
 }

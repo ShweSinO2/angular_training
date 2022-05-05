@@ -30,6 +30,7 @@
       <mat-label>Confirm Password</mat-label>
       <input matInput type="password" formControlName="cfmPassword" placeholder="Confirm Password">
       <mat-error *ngIf="myError('cfmPassword', 'required')">Confirm password is required</mat-error>
+      <mat-error *ngIf="myError('cfmPassword', 'MustMatch')">Password must match</mat-error>
     </mat-form-field>
 
     <div class="submit-btn">
