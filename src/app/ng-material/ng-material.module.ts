@@ -7,9 +7,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     declarations: [],
@@ -22,9 +22,9 @@ import { MatButtonModule } from '@angular/material/button';
         MatDatepickerModule,
         MatNativeDateModule,
         MatIconModule,
-        MatSelectModule,
         MatRadioModule,
         MatButtonModule,
+        MatSelectModule
     ],
     exports: [
         CommonModule,
@@ -35,9 +35,9 @@ import { MatButtonModule } from '@angular/material/button';
         MatDatepickerModule,
         MatNativeDateModule,
         MatIconModule,
-        MatSelectModule,
         MatRadioModule,
-        MatButtonModule
+        MatButtonModule,
+        MatSelectModule
     ]
 })
 export class NgMaterialModule { 
