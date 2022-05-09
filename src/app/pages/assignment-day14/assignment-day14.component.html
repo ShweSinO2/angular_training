@@ -1,0 +1,136 @@
+<div class="container">
+  <h1>Hotel Guest Registration Form</h1>
+  <form [formGroup]="guestRegForm" (ngSubmit)="saveData(guestRegForm.value)" class="guest-registration">
+
+    <!-- user info blk -->
+    <h2>User Information</h2>
+
+    <!-- name -->
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name" placeholder="Name">
+      <mat-error *ngIf="myError('name','required')">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+    <!-- /name -->
+
+    <!-- address -->
+    <mat-form-field appearance="fill">
+      <mat-label>Address</mat-label>
+      <textarea matInput formControlName="address" placeholder="Address"></textarea>
+    </mat-form-field>
+    <!-- /address -->
+
+    <!-- email -->
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" placeholder="Email">
+      <mat-error *ngIf="myError('email','required')">
+        Email is required
+      </mat-error>
+      <mat-error *ngIf="!myError('email','required') && myError('email','email')">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+    <!-- /email -->
+
+    <!-- telephone -->
+    <mat-form-field appearance="fill">
+      <mat-label>Telephone</mat-label>
+      <span matPrefix>+95 &nbsp;</span>
+      <input type="tel" matInput formControlName="phone" placeholder="9123456780">
+      <mat-icon matSuffix>mode_edit</mat-icon>
+      <mat-error *ngIf="myError('phone','required')">
+        Telephone is required
+      </mat-error>
+      <mat-error *ngIf="!myError('phone','required') && myError('phone','invalidTelephone')">
+        Telephone must be 10 digit mobile number format (9xxxxxxxxx) and start with "9".
+      </mat-error>
+    </mat-form-field>
+    <!-- /telephone -->
+    <!-- /user info blk -->
+
+    <!-- booking info blk -->
+    <h2>Booking Information</h2>
+
+    <!-- check-in && check-out Date -->
+    <mat-form-field appearance="fill" class="field-date">
+      <mat-label>Check-in && Check-out Date</mat-label>
+      <mat-date-range-input [rangePicker]="campaignOnePicker" [min]="minDate">
+        <input matStartDate placeholder="Check-in date" formControlName="checkInDate">
+        <input matEndDate placeholder="Check-out date" formControlName="checkOutDate">
+      </mat-date-range-input>
+      <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+      <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+      <mat-error *ngIf="myError('checkInDate','required') || myError('checkOutDate','required')">
+        Choose start date and end date correctly
+      </mat-error>
+    </mat-form-field>
+    <!-- /check-in && check-out Date -->
+
+    <!-- number of guest -->
+    <mat-form-field appearance="fill">
+      <mat-label>Number of Guests in Room</mat-label>
+      <input matInput type="text" formControlName="numberOfGuest" placeholder="Number of Guests in Room">
+      <mat-error *ngIf="myError('numberOfGuest','pattern')">
+        Only number value accept
+      </mat-error>
+    </mat-form-field>
+    <!-- /number of guest -->
+
+    <!-- room type -->
+    <mat-form-field appearance="fill">
+      <mat-label>Room Type</mat-label>
+      <mat-select formControlName="roomType" (ngModelChange)="calculateTotalCost()">
+        <mat-option *ngFor="let room of roomTypeSelection" [value]="room.value">
+          {{room.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- /room type -->
+
+    <!-- wifi type -->
+    <div class="radio-group">
+      <div class="radio-label">
+        <mat-label>Lease Pocket Wifi ($5)</mat-label>
+      </div>
+      <mat-radio-group formControlName="wifiCost" (ngModelChange)="calculateTotalCost()">
+        <mat-radio-button *ngFor="let wifi of wifiSelection" [value]="wifi.value">
+          {{wifi.viewValue}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <!-- /wifi type -->
+
+    <!-- total cost -->
+    <mat-form-field appearance="fill">
+      <mat-label>Total Cost for 1 Day</mat-label>
+      <span matPrefix>$ &nbsp;</span>
+      <input matInput formControlName="totalCost" readonly="true">
+    </mat-form-field>
+    <!-- /total cost -->
+
+    <!-- special requirement -->
+    <mat-form-field appearance="fill">
+      <mat-label>Note/Special Requirements</mat-label>
+      <textarea matInput placeholder="Note/Special Requirements" formControlName="specialRequirements">
+      </textarea>
+      <mat-hint align="end">
+        {{this.guestRegForm.controls['specialRequirements'].value.length}} / {{NUMBER_OF_NOTE}}
+      </mat-hint>
+      <mat-error *ngIf="myError('specialRequirements','maxlength')">
+        Maximum number of word is {{NUMBER_OF_NOTE}}! Exceeded more than limit
+      </mat-error>
+    </mat-form-field>
+    <!-- /special requirement -->
+    <!-- /booking info blk -->
+
+    <div class="btn-container">
+      <button mat-raised-button color="primary" [disabled]="!guestRegForm.valid" class="search-btn">
+        Search
+      </button>
+    </div>
+  </form>
+</div>
