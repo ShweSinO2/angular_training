@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl  } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms'
 
 import { ValidatePhone } from 'src/app/validators/telephone.validator';
 
@@ -9,16 +9,16 @@ interface BookingFormGroup extends FormGroup {
   value: Booking;
   controls: {
     name: AbstractControl;
-    address: AbstractControl ;
-    email: AbstractControl ;
-    phone: AbstractControl ;
-    checkInDate: AbstractControl ;
-    checkOutDate: AbstractControl ;
-    numberOfGuest: AbstractControl ;
-    roomType: AbstractControl ;
-    wifiCost: AbstractControl ;
-    totalCost: AbstractControl ;
-    specialRequirements: AbstractControl ;
+    address: AbstractControl;
+    email: AbstractControl;
+    phone: AbstractControl;
+    checkInDate: AbstractControl;
+    checkOutDate: AbstractControl;
+    numberOfGuest: AbstractControl;
+    roomType: AbstractControl;
+    wifiCost: AbstractControl;
+    totalCost: AbstractControl;
+    specialRequirements: AbstractControl;
   };
 }
 
@@ -27,7 +27,7 @@ interface BookingFormGroup extends FormGroup {
   templateUrl: './assignment-day14.component.html',
   styleUrls: ['./assignment-day14.component.scss']
 })
-  
+
 export class AssignmentDay14Component implements OnInit {
   roomTypeSelection: InputObj[] = [
     { value: 100, viewValue: 'Single $100' },
@@ -44,19 +44,19 @@ export class AssignmentDay14Component implements OnInit {
   minDate = new Date();
 
   constructor(
-    private fb: FormBuilder) { 
+    private fb: FormBuilder) {
     this.guestRegForm = this.fb.group({
       name: ['', [Validators.required]],
       address: [''],
-      email: ['',[Validators.required,Validators.email]],
-      phone: ['',[Validators.required, ValidatePhone]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, ValidatePhone]],
       checkInDate: ['', [Validators.required]],
-      checkOutDate: ['',[Validators.required]],
+      checkOutDate: ['', [Validators.required]],
       numberOfGuest: [0, Validators.pattern("^[0-9]*$")],
       roomType: [100],
-      wifiCost: [0,[Validators.required]],
+      wifiCost: [0, [Validators.required]],
       totalCost: [0],
-      specialRequirements: ['',[Validators.maxLength(this.NUMBER_OF_NOTE)]]
+      specialRequirements: ['', [Validators.maxLength(this.NUMBER_OF_NOTE)]]
     }) as BookingFormGroup;
   }
 
@@ -64,7 +64,7 @@ export class AssignmentDay14Component implements OnInit {
     this.calculateTotalCost();
   }
 
-  public myError = (controlName: string, errorName: string) =>{
+  public myError = (controlName: string, errorName: string) => {
     return this.guestRegForm.controls[controlName].hasError(errorName);
   }
 
