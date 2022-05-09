@@ -1,0 +1,39 @@
+.container {
+  padding-bottom: 30px;
+
+  h1 {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .guest-registration {
+    width: 50%;
+    margin: 0 auto;
+
+    mat-form-field {
+      display: block;
+      width: 100%;
+    }
+
+    .field-date {
+      margin-bottom: 15px;
+    }
+
+    .radio-group {
+      margin: 15px 0;
+
+      .radio-label {
+        margin-bottom: 10px;
+      }
+
+      mat-radio-button {
+        margin-right: 20px;
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
