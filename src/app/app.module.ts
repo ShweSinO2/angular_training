@@ -19,6 +19,7 @@ import { AssignmentDay10TableComponent } from './pages/assignment-day10-table/as
 import { AssignmentDay11Component } from './pages/assignment-day11/assignment-day11.component';
 import { AssignmentDay12Component } from './pages/assignment-day12/assignment-day12.component';
 import { AssignmentDay14Component } from './pages/assignment-day14/assignment-day14.component';
+import { AssignmentDay15Component } from './pages/assignment-day15/assignment-day15.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AssignmentDay14Component } from './pages/assignment-day14/assignment-da
     AssignmentDay10TableComponent,
     AssignmentDay11Component,
     AssignmentDay12Component,
-    AssignmentDay14Component
+    AssignmentDay14Component,
+    AssignmentDay15Component
   ],
   imports: [
     BrowserModule,
