@@ -6,3 +6,13 @@ export interface User{
   phoneNumber?: string;
   hobby?: string;
 }
+
+export interface Employee {
+  id: number;
+  name: string;
+  department: string;
+  gender: string;
+  position: string;
+  phoneNumber: string;
+  joinDate: string;
+}
