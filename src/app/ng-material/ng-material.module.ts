@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
     declarations: [],
@@ -24,7 +25,8 @@ import { MatSelectModule } from '@angular/material/select';
         MatIconModule,
         MatRadioModule,
         MatButtonModule,
-        MatSelectModule
+        MatSelectModule,
+        MatPaginatorModule
     ],
     exports: [
         CommonModule,
@@ -37,7 +39,8 @@ import { MatSelectModule } from '@angular/material/select';
         MatIconModule,
         MatRadioModule,
         MatButtonModule,
-        MatSelectModule
+        MatSelectModule,
+        MatPaginatorModule
     ]
 })
 export class NgMaterialModule { 
