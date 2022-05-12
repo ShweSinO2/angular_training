@@ -17,7 +17,6 @@ import { MatSortModule } from '@angular/material/sort';
     imports: [
         CommonModule,
         MatTableModule,
-        MatSortModule,
         MatFormFieldModule,
         MatInputModule,
         MatDatepickerModule,
@@ -32,7 +31,6 @@ import { MatSortModule } from '@angular/material/sort';
     exports: [
         CommonModule,
         MatTableModule,
-        MatSortModule,
         MatFormFieldModule,
         MatInputModule,
         MatDatepickerModule,
