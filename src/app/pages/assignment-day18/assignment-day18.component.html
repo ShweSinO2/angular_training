@@ -1,0 +1,62 @@
+<div class="container">
+  <h1>Employee Info List</h1>
+  <div class="employee-table-container">
+
+    <!-- Filter -->
+    <mat-form-field appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search columns">
+    </mat-form-field>
+
+    <mat-table [dataSource]="dataSource" matSort #empTbSort="matSort">
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> #ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+
+      <!-- Department Column -->
+      <ng-container matColumnDef="department">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Department </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.department}} </mat-cell>
+      </ng-container>
+
+      <!-- Gender Column -->
+      <ng-container matColumnDef="gender">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Gender </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.gender}} </mat-cell>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef> Position </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+      </ng-container>
+
+      <!-- PhoneNumber Column -->
+      <ng-container matColumnDef="phoneNumber">
+        <mat-header-cell *matHeaderCellDef> PhoneNumber </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.phoneNumber}} </mat-cell>
+      </ng-container>
+
+      <!-- JoinDate Column -->
+      <ng-container matColumnDef="joinDate">
+        <mat-header-cell *matHeaderCellDef> JoinDate</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.joinDate}} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator #paginator [pageSizeOptions]="pageSize" showFirstLastButtons></mat-paginator>
+
+  </div>
+</div>
