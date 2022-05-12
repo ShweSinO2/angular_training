@@ -9,6 +9,7 @@ import { AssignmentDay12Component } from './pages/assignment-day12/assignment-da
 import { AssignmentDay14Component } from './pages/assignment-day14/assignment-day14.component';
 import { AssignmentDay15Component } from './pages/assignment-day15/assignment-day15.component';
 import { AssignmentDay16Component } from './pages/assignment-day16/assignment-day16.component';
+import { AssignmentDay18Component } from './pages/assignment-day18/assignment-day18.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
@@ -73,6 +74,10 @@ const routes: Routes = [
   {
     path: 'day16',
     component: AssignmentDay16Component
+  },
+  {
+    path: 'day18',
+    component: AssignmentDay18Component
   }
 ];
 
