@@ -22,6 +22,9 @@ import { AssignmentDay14Component } from './pages/assignment-day14/assignment-da
 import { AssignmentDay15Component } from './pages/assignment-day15/assignment-day15.component';
 import { AssignmentDay16Component } from './pages/assignment-day16/assignment-day16.component';
 import { AssignmentDay18Component } from './pages/assignment-day18/assignment-day18.component';
+import { AssignmentDay19Component } from './pages/assignment-day19/assignment-day19.component';
+import { ChangeToKGPipe } from './pipes/change-to-kg.pipe';
+import { PowerExponentPipe } from './pipes/power-exponent.pipe';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { AssignmentDay18Component } from './pages/assignment-day18/assignment-da
     AssignmentDay14Component,
     AssignmentDay15Component,
     AssignmentDay16Component,
-    AssignmentDay18Component
+    AssignmentDay18Component,
+    AssignmentDay19Component,
+    ChangeToKGPipe,
+    PowerExponentPipe
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,10 @@ import { AssignmentDay18Component } from './pages/assignment-day18/assignment-da
     NgMaterialModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ChangeToKGPipe,
+    PowerExponentPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

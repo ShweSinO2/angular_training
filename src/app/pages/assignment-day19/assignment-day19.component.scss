@@ -1,0 +1,39 @@
+.pipe-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  text-align: center;
+
+  h1 {
+    margin: 15px 0;
+  }
+
+  .calculator {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+
+    .boost {
+      margin-bottom: 15px;
+      text-align: right;
+
+      label {
+        margin-right: 10px;
+      }
+
+      input {
+        padding: 5px 8px;
+      }
+    }
+
+    p {
+      span {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
