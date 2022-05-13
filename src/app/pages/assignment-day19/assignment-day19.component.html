@@ -1,0 +1,36 @@
+<div class="pipe-container">
+  <h1>Testing Pipes</h1>
+  <p>The hero's birthday is {{ birthday | date }}</p>
+  <p>{{currencyValue | currency}}</p>
+  <p>{{currencyValue | currency:'EUR'}}</p>
+  <p>{{currencyValue | currency:'INR'}}</p>
+  <p>The hero's birthday short date is {{ birthday | date: 'shortDate' }}</p>
+  <p>The hero's birthday full date is {{ birthday | date: 'fullDate' }}</p>
+  <p>
+    The chained hero's birthday is
+    {{ birthday | date | uppercase}}
+    The chained hero's birthday is
+    {{ birthday | date:'fullDate' | uppercase}}
+  </p>
+  <hr>
+  <h1>Custom Pipe</h1>
+  <p>{{5 | changeToKG}}</p>
+  <h2>Power Booster</h2>
+  <p>Super power boost: {{2 | powerExponent: 10}}</p>
+  <div class="calculator">
+    <h2>Power Boost Calculator</h2>
+    <div class="boost">
+      <label for="power-input">Normal power: </label>
+      <input id="power-input" type="text" [(ngModel)]="power">
+    </div>
+    <div class="boost">
+      <label for="boost-input">Boost factor: </label>
+      <input id="boost-input" type="text" [(ngModel)]="factor">
+    </div>
+    <p>
+      Super Hero Power: <span>{{power | powerExponent: factor}}</span>
+    </p>
+  </div>
+  <h2>Testing Name</h2>
+  <p>Name is: {{ (isMyName ? myName : unknownName) | uppercase }}</p>
+</div>
