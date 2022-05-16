@@ -25,6 +25,8 @@ import { AssignmentDay18Component } from './pages/assignment-day18/assignment-da
 import { AssignmentDay19Component } from './pages/assignment-day19/assignment-day19.component';
 import { ChangeToKGPipe } from './pipes/change-to-kg.pipe';
 import { PowerExponentPipe } from './pipes/power-exponent.pipe';
+import { AssignmentDay20Component } from './pages/assignment-day20/assignment-day20.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { PowerExponentPipe } from './pipes/power-exponent.pipe';
     AssignmentDay18Component,
     AssignmentDay19Component,
     ChangeToKGPipe,
-    PowerExponentPipe
+    PowerExponentPipe,
+    AssignmentDay20Component,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+h1 {
+  margin: 15px 0;
+  color: #0000ff;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav {
+  width: 500px;
+  margin: 0 auto;
+
+  ul {
+    li {
+      a {
+        color: #ff0000;
+      }
+    }
+  }
+}

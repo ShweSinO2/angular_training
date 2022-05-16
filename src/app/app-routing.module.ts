@@ -11,17 +11,22 @@ import { AssignmentDay15Component } from './pages/assignment-day15/assignment-da
 import { AssignmentDay16Component } from './pages/assignment-day16/assignment-day16.component';
 import { AssignmentDay18Component } from './pages/assignment-day18/assignment-day18.component';
 import { AssignmentDay19Component } from './pages/assignment-day19/assignment-day19.component';
+import { AssignmentDay20Component } from './pages/assignment-day20/assignment-day20.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
 import { AssignmentDay7Component } from './pages/assignment-day7/assignment-day7.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { TestingOneComponent } from './pages/testing-one/testing-one.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', redirectTo: 'day12', pathMatch: 'full'
+  },
+  {
+    path: 'testing',
     component: TestingOneComponent
   },
   {
@@ -60,7 +65,7 @@ const routes: Routes = [
     path: 'member/register',
     component: AssignmentDay11Component
   },
- {
+  {
     path: 'day12',
     component: AssignmentDay12Component
   },
@@ -79,10 +84,18 @@ const routes: Routes = [
   {
     path: 'day18',
     component: AssignmentDay18Component
-  }, 
+  },
   {
     path: 'day19',
     component: AssignmentDay19Component
+  },
+  {
+    path: 'day20',
+    component: AssignmentDay20Component
+  },
+  {
+    path: '**',
+    component: NotFoundPageComponent
   }
 ];
 
