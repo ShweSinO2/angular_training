@@ -30,7 +30,6 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { ChangeToKGPipe } from './pipes/change-to-kg.pipe';
 import { PowerExponentPipe } from './pipes/power-exponent.pipe';
 
-
 @NgModule({
   declarations: [
     ChangeToKGPipe,
