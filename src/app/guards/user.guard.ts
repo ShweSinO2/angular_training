@@ -9,10 +9,10 @@ export class UserGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (!isNaN(route.params['id']) && route.params['id'] <= 100) {
-      return true;
-    } else {
+    const paramId = parseInt(route.params['id']);
+    if (!paramId || !Number.isInteger(paramId) || paramId > 100) {
       return false;
     }
+    return true;
   }
 }
