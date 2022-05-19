@@ -1,4 +1,4 @@
-export interface User{
+export interface User {
   id: number;
   name: string;
   email: string;
@@ -15,4 +15,9 @@ export interface Employee {
   position: string;
   phoneNumber: string;
   joinDate: string;
+}
+
+export interface LoginUser {
+  email: string;
+  password: string;
 }

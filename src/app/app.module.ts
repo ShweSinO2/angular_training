@@ -30,6 +30,7 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 //pipes
 import { ChangeToKGPipe } from './pipes/change-to-kg.pipe';
 import { PowerExponentPipe } from './pipes/power-exponent.pipe';
+import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { PowerExponentPipe } from './pipes/power-exponent.pipe';
     AssignmentDay19Component,
     AssignmentDay20Component,
     AssignmentDay22Component,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    AssignmentDay23Component
   ],
   imports: [
     BrowserModule,

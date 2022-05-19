@@ -24,83 +24,106 @@ import { UserRegistrationComponent } from './pages/user-registration/user-regist
 
 //guards
 import { UserGuard } from './guards/user.guard';
+import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'day12', pathMatch: 'full'
+    path: '', redirectTo: 'login', pathMatch: 'full'
   },
   {
     path: 'testing',
-    component: TestingOneComponent
+    component: TestingOneComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'day4',
-    component: AssignmentDay4Component
+    component: AssignmentDay4Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day5',
-    component: AssignmentDay5Component
+    component: AssignmentDay5Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day6',
-    component: AssignmentDay6Component
+    component: AssignmentDay6Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day7',
-    component: AssignmentDay7Component
+    component: AssignmentDay7Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'registration',
-    component: UserRegistrationComponent
+    component: UserRegistrationComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'user-list',
-    component: UserListComponent
+    component: UserListComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'day10',
-    component: AssignmentDay10Component
+    component: AssignmentDay10Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day10-table',
-    component: AssignmentDay10TableComponent
+    component: AssignmentDay10TableComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'member/register',
-    component: AssignmentDay11Component
+    component: AssignmentDay11Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day12',
-    component: AssignmentDay12Component
+    component: AssignmentDay12Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day14',
-    component: AssignmentDay14Component
+    component: AssignmentDay14Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day15',
-    component: AssignmentDay15Component
+    component: AssignmentDay15Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day16',
-    component: AssignmentDay16Component
+    component: AssignmentDay16Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day18',
-    component: AssignmentDay18Component
+    component: AssignmentDay18Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day19',
-    component: AssignmentDay19Component
+    component: AssignmentDay19Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day20',
-    component: AssignmentDay20Component
+    component: AssignmentDay20Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day22/:id',
     component: AssignmentDay22Component,
     canActivate: [UserGuard]
+  },
+  {
+    path: 'login',
+    component: AssignmentDay23Component
   },
   {
     path: '**',
