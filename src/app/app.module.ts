@@ -25,6 +25,7 @@ import { AssignmentDay18Component } from './pages/assignment-day18/assignment-da
 import { AssignmentDay19Component } from './pages/assignment-day19/assignment-day19.component';
 import { AssignmentDay20Component } from './pages/assignment-day20/assignment-day20.component';
 import { AssignmentDay22Component } from './pages/assignment-day22/assignment-day22.component';
+import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 //pipes
@@ -54,7 +55,8 @@ import { PowerExponentPipe } from './pipes/power-exponent.pipe';
     AssignmentDay19Component,
     AssignmentDay20Component,
     AssignmentDay22Component,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    AssignmentDay23Component
   ],
   imports: [
     BrowserModule,

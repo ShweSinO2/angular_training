@@ -1,17 +1,19 @@
 <!-- MatToolbar -->
-<mat-toolbar>
+<mat-toolbar *ngIf="showNavBar">
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Assignment Day-21</span>
-  <button mat-button routerLink="/member/register">
-    Day 11
+  <button mat-button routerLink="/login">
+    Login
   </button>
-  <button mat-button routerLink="/day12">
+  <button mat-button routerLink="/day12" routerLinkActive="active">
     Day 12
   </button>
-  <button mat-button routerLink="/day14">
+  <button mat-button routerLink="/day14" routerLinkActive="active">
     Day 14
+  </button>
+  <button mat-button routerLink="/day20" routerLinkActive="active">
+    Day 20
   </button>
 </mat-toolbar>
 <!-- /MatToolbar -->

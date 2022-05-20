@@ -13,6 +13,7 @@ import { AssignmentDay18Component } from './pages/assignment-day18/assignment-da
 import { AssignmentDay19Component } from './pages/assignment-day19/assignment-day19.component';
 import { AssignmentDay20Component } from './pages/assignment-day20/assignment-day20.component';
 import { AssignmentDay22Component } from './pages/assignment-day22/assignment-day22.component';
+import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
@@ -27,7 +28,7 @@ import { UserGuard } from './guards/user.guard';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'day12', pathMatch: 'full'
+    path: '', redirectTo: 'login', pathMatch: 'full'
   },
   {
     path: 'testing',
@@ -67,15 +68,17 @@ const routes: Routes = [
   },
   {
     path: 'member/register',
-    component: AssignmentDay11Component
+    component: AssignmentDay11Component,
   },
   {
     path: 'day12',
-    component: AssignmentDay12Component
+    component: AssignmentDay12Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day14',
-    component: AssignmentDay14Component
+    component: AssignmentDay14Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day15',
@@ -95,12 +98,16 @@ const routes: Routes = [
   },
   {
     path: 'day20',
-    component: AssignmentDay20Component
+    component: AssignmentDay20Component,
+    canActivate: [UserGuard]
   },
   {
     path: 'day22/:id',
-    component: AssignmentDay22Component,
-    canActivate: [UserGuard]
+    component: AssignmentDay22Component
+  },
+  {
+    path: 'login',
+    component: AssignmentDay23Component
   },
   {
     path: '**',
