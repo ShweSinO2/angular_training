@@ -13,6 +13,7 @@ import { AssignmentDay18Component } from './pages/assignment-day18/assignment-da
 import { AssignmentDay19Component } from './pages/assignment-day19/assignment-day19.component';
 import { AssignmentDay20Component } from './pages/assignment-day20/assignment-day20.component';
 import { AssignmentDay22Component } from './pages/assignment-day22/assignment-day22.component';
+import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
@@ -24,8 +25,6 @@ import { UserRegistrationComponent } from './pages/user-registration/user-regist
 
 //guards
 import { UserGuard } from './guards/user.guard';
-import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
