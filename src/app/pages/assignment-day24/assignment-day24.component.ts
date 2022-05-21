@@ -27,7 +27,6 @@ export class AssignmentDay24Component implements OnInit {
 
   goPostFormID(id: number) {
     this.router.navigate(['/post/' + id]);
-    console.log(id);
   }
 
   getPostData() {
