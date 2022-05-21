@@ -14,6 +14,7 @@ import { AssignmentDay19Component } from './pages/assignment-day19/assignment-da
 import { AssignmentDay20Component } from './pages/assignment-day20/assignment-day20.component';
 import { AssignmentDay22Component } from './pages/assignment-day22/assignment-day22.component';
 import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
+import { AssignmentDay24Component } from './pages/assignment-day24/assignment-day24.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
@@ -22,13 +23,17 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { TestingOneComponent } from './pages/testing-one/testing-one.component';
 import { UserListComponent } from './pages/user-list/user-list.component';
 import { UserRegistrationComponent } from './pages/user-registration/user-registration.component';
+import { PostControlComponent } from './pages/post-control/post-control.component';
 
 //guards
 import { UserGuard } from './guards/user.guard';
 
+//resolver
+import { PostResolver } from './resolver/post.resolver';
+
 const routes: Routes = [
   {
-    path: '', redirectTo: 'login', pathMatch: 'full'
+    path: '', redirectTo: 'day24', pathMatch: 'full'
   },
   {
     path: 'testing',
@@ -108,6 +113,19 @@ const routes: Routes = [
   {
     path: 'login',
     component: AssignmentDay23Component
+  },
+  {
+    path: 'day24',
+    component: AssignmentDay24Component
+  },
+  {
+    path: 'post',
+    component: PostControlComponent,
+  },
+  {
+    path: 'post/:id',
+    component: PostControlComponent,
+    resolve: { user: PostResolver }
   },
   {
     path: '**',
