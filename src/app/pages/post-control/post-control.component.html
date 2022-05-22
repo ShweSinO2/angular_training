@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Post Action</h1>
+  <form [formGroup]="postActionForm" (ngSubmit)="savePostData()" class="login-form">
+    <!-- Title -->
+    <mat-form-field appearance="standard">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" formControlName="title" placeholder="Title">
+      <mat-error *ngIf="myError('title', 'required')">Title is <strong>required</strong></mat-error>
+    </mat-form-field>
+    <!-- /Title -->
+
+    <!-- Author -->
+    <mat-form-field appearance="standard">
+      <mat-label>Author</mat-label>
+      <input matInput type="text" formControlName="author" placeholder="Author">
+      <mat-error *ngIf="myError('author', 'required')">Author is required</mat-error>
+    </mat-form-field>
+    <!-- /Author -->
+
+    <div class="login-btn">
+      <button mat-flat-button type="submit" [disabled]="!postActionForm.valid" color="primary">Submit</button>
+    </div>
+  </form>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMaterialModule } from './ng-material/ng-material.module';
@@ -26,6 +27,8 @@ import { AssignmentDay19Component } from './pages/assignment-day19/assignment-da
 import { AssignmentDay20Component } from './pages/assignment-day20/assignment-day20.component';
 import { AssignmentDay22Component } from './pages/assignment-day22/assignment-day22.component';
 import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
+import { AssignmentDay24Component } from './pages/assignment-day24/assignment-day24.component';
+import { PostControlComponent } from './pages/post-control/post-control.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 //pipes
@@ -55,11 +58,14 @@ import { PowerExponentPipe } from './pipes/power-exponent.pipe';
     AssignmentDay19Component,
     AssignmentDay20Component,
     AssignmentDay22Component,
-    NotFoundPageComponent,
-    AssignmentDay23Component
+    AssignmentDay24Component,
+    AssignmentDay23Component,
+    PostControlComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
