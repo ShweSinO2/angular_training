@@ -29,6 +29,7 @@ import { AssignmentDay22Component } from './pages/assignment-day22/assignment-da
 import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
 import { AssignmentDay24Component } from './pages/assignment-day24/assignment-day24.component';
 import { PostControlComponent } from './pages/post-control/post-control.component';
+import { AssignmentDay25Component } from './pages/assignment-day25/assignment-day25.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 //pipes
@@ -61,7 +62,8 @@ import { PowerExponentPipe } from './pipes/power-exponent.pipe';
     AssignmentDay24Component,
     AssignmentDay23Component,
     PostControlComponent,
-    NotFoundPageComponent
+    AssignmentDay25Component,
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,
