@@ -1,0 +1,17 @@
+.container {
+  margin-bottom: 15px;
+
+  h1 {
+    color: #196868;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+  }
+}

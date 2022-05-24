@@ -16,6 +16,7 @@ import { AssignmentDay22Component } from './pages/assignment-day22/assignment-da
 import { AssignmentDay23Component } from './pages/assignment-day23/assignment-day23.component';
 import { AssignmentDay24Component } from './pages/assignment-day24/assignment-day24.component';
 import { AssignmentDay25Component } from './pages/assignment-day25/assignment-day25.component';
+import { AssignmentDay26Component } from './pages/assignment-day26/assignment-day26.component';
 import { AssignmentDay4Component } from './pages/assignment-day4/assignment-day4.component';
 import { AssignmentDay5Component } from './pages/assignment-day5/assignment-day5.component';
 import { AssignmentDay6Component } from './pages/assignment-day6/assignment-day6.component';
@@ -131,6 +132,10 @@ const routes: Routes = [
   {
     path: 'day25',
     component: AssignmentDay25Component
+  },
+  {
+    path: 'day26',
+    component: AssignmentDay26Component
   },
   {
     path: '**',
