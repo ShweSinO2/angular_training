@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>To do List</h1>
+  <form [formGroup]="todoForm" (ngSubmit)="saveTask()">
+    <mat-form-field appearance="standard">
+      <mat-label>Task</mat-label>
+      <input matInput type="text" formControlName="task">
+      <mat-error *ngIf="myError('task', 'required')">Please provide task name</mat-error>
+    </mat-form-field>
+    <div class="task-btn">
+      <button mat-stroked-button [disabled]="!todoForm.valid" color="primary">ADD TASK</button>
+    </div>
+  </form>
+</div>
+
+<app-to-do-list [todoTask]="todoList" (taskDeleteID)="deleteTask($event)"></app-to-do-list>

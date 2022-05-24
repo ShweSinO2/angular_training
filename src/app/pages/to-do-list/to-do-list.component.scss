@@ -1,0 +1,10 @@
+.container {
+  mat-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
