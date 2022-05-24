@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-card *ngFor = "let eachTask of todoTask;let id = index">
+  <mat-card *ngFor="let eachTask of todoTask;let id = index">
     {{eachTask.task}}
     <button mat-stroked-button color="warn" (click)="ontaskDelete(id)">Remove</button>
   </mat-card>

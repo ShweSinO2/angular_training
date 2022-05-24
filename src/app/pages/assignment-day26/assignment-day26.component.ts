@@ -14,7 +14,7 @@ export class AssignmentDay26Component implements OnInit {
 
   ngOnInit(): void {
     this.todoForm = this.fb.group({
-      task: ['',Validators.required]
+      task: ['', Validators.required]
     });
   }
 
