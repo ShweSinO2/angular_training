@@ -1,0 +1,27 @@
+.group-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+
+  .container {
+    width: 30%;
+    margin: 0 auto;
+
+    .list {
+      border: 1px solid #000;
+      border-radius: 5px;
+
+      .example-custom-placeholder {
+        border: dotted 3px #999;
+        background: #ccc;
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+        min-height: 60px;
+      }
+
+      .box {
+        margin: 15px 10px;
+      }
+    }
+  }
+}

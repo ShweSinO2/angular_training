@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop'
 import { NgMaterialModule } from './ng-material/ng-material.module';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -33,6 +34,7 @@ import { AssignmentDay25Component } from './pages/assignment-day25/assignment-da
 import { AssignmentDay26Component } from './pages/assignment-day26/assignment-day26.component';
 import { ToDoListComponent } from './pages/to-do-list/to-do-list.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { AssignmentDay27Component } from './pages/assignment-day27/assignment-day27.component';
 
 //pipes
 import { ChangeToKGPipe } from './pipes/change-to-kg.pipe';
@@ -67,6 +69,7 @@ import { PowerExponentPipe } from './pipes/power-exponent.pipe';
     AssignmentDay25Component,
     NotFoundPageComponent,
     AssignmentDay26Component,
+    AssignmentDay27Component,
     ToDoListComponent,
   ],
   imports: [
@@ -75,6 +78,7 @@ import { PowerExponentPipe } from './pipes/power-exponent.pipe';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    DragDropModule,
     NgMaterialModule,
     ReactiveFormsModule
   ],
